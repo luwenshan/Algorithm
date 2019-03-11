@@ -1,6 +1,6 @@
 package com.lws.algorithm.leetcode;
 
-public class LC35SearchInsertPosition {
+public class LC035SearchInsertPosition {
     public static void main(String[] args) {
 
     }

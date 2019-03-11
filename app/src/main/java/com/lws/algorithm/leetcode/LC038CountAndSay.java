@@ -4,10 +4,10 @@ package com.lws.algorithm.leetcode;
  * 参考：
  * https://leetcode.windliang.cc/leetCode-38-Count-and-Say.html
  */
-public class LC38CountAndSay {
+public class LC038CountAndSay {
 
     public static void main(String[] args) {
-        String result = new LC38CountAndSay().countAndSay2(1);
+        String result = new LC038CountAndSay().countAndSay2(1);
         System.out.println(result);
     }
 
