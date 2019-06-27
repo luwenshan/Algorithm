@@ -1,5 +1,8 @@
 package com.lws.algorithm.utils;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * （二叉）树相关工具类
  */
@@ -24,5 +27,41 @@ public class TreeUtil {
         node.left = createBTreeByLevelOrder(array, 2 * i);
         node.right = createBTreeByLevelOrder(array, 2 * i + 1);
         return node;
+    }
+
+    public static TreeNode createBTreeByLevelOrder(Integer[] array) {
+        return createBTreeByLevelOrder(array, 1);
+    }
+
+    public static TreeNode createBTreeByLevelOrder(Integer[] array, int i) {
+        if (i > array.length || array[i - 1] == null) {
+            return null;
+        }
+        TreeNode node = new TreeNode(array[i - 1]);
+        node.left = createBTreeByLevelOrder(array, 2 * i);
+        node.right = createBTreeByLevelOrder(array, 2 * i + 1);
+        return node;
+    }
+
+    public static void printTreeLevelOrder(TreeNode root) {
+        if (root == null) {
+            System.out.println("null");
+        }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            int levelSize = queue.size();
+            for (int i = 0; i < levelSize; i++) {
+                TreeNode node = queue.poll();
+                if (node != null) {
+                    System.out.print(node.val + " ");
+                    queue.offer(node.left);
+                    queue.offer(node.right);
+                } else {
+                    System.out.print("null ");
+                }
+            }
+            System.out.println();
+        }
     }
 }
