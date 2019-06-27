@@ -1,6 +1,8 @@
 package com.lws.algorithm.utils;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 /**
@@ -49,19 +51,26 @@ public class TreeUtil {
         }
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
+        List<String> result = new ArrayList<>();
         while (!queue.isEmpty()) {
             int levelSize = queue.size();
+            StringBuilder line = new StringBuilder();
             for (int i = 0; i < levelSize; i++) {
                 TreeNode node = queue.poll();
                 if (node != null) {
-                    System.out.print(node.val + " ");
+                    line.append(node.val).append(" ");
                     queue.offer(node.left);
                     queue.offer(node.right);
                 } else {
-                    System.out.print("null ");
+                    line.append("null ");
                 }
             }
-            System.out.println();
+            line.append("\n");
+            result.add(line.toString());
+        }
+        int height = result.size() - 1;
+        for (int i = 0; i < height; i++) {
+            System.out.print(result.get(i));
         }
     }
 }
