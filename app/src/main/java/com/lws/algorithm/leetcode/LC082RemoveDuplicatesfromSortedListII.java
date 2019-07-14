@@ -1,5 +1,7 @@
 package com.lws.algorithm.leetcode;
 
+import com.lws.algorithm.utils.ListNode;
+
 /**
  * Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.
  * <p>
@@ -51,15 +53,6 @@ public class LC082RemoveDuplicatesfromSortedListII {
             cur = pre.next;
         }
         return tmpHead.next;
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
     }
 
     public static void printList(ListNode head) {

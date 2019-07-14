@@ -1,5 +1,7 @@
 package com.lws.algorithm.leetcode;
 
+import com.lws.algorithm.utils.ListNode;
+
 public class LC021MergeTwoSortedLists {
     public static void main(String[] args) {
         ListNode l1 = new ListNode(1);
@@ -56,14 +58,5 @@ public class LC021MergeTwoSortedLists {
             pre.next = l1;
         }
         return result.next;
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
     }
 }

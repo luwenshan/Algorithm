@@ -1,5 +1,7 @@
 package com.lws.algorithm.leetcode;
 
+import com.lws.algorithm.utils.ListNode;
+
 /**
  * Given a sorted linked list, delete all duplicates such that each element appear only once.
  * <p>
@@ -45,15 +47,6 @@ public class LC083RemoveDuplicatesfromSortedList {
             cur = pre.next;
         }
         return head;
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
     }
 
     public static void printList(ListNode head) {
