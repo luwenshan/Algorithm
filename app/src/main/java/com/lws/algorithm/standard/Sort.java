@@ -9,7 +9,7 @@ public class Sort {
 
     public static void main(String[] args) {
         int[] a = {4, 5, 2, 1, 3, 6};
-        new Sort().selectionSort(a, 6);
+        new Sort().insertionSort(a, 6);
         System.out.println(Arrays.toString(a));
     }
 
@@ -77,15 +77,5 @@ public class Sort {
             a[minIndex] = a[i];
             a[i] = tmp;
         }
-    }
-
-    /**
-     * 归并排序
-     */
-    public void mergeSort(int[] a, int n) {
-        if (a == null || n <= 1) {
-            return;
-        }
-
     }
 }
