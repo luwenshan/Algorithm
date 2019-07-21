@@ -1,4 +1,4 @@
-package com.lws.algorithm.standard;
+package com.lws.algorithm.standard.sort;
 
 import java.util.Arrays;
 
